@@ -33,7 +33,7 @@
                     <div class="wrap d-flex flex-row justify-content-between mt-4 mb-3">
                         <h3 class="title ps-3">Description</h3>
                         <h3 class="review d-flex align-items-start"><i
-                                class="fa-solid fa-star me-1"></i>{{ $rating_value }}</h3>
+                                class="fa-solid fa-star me-1"></i>{{ number_format($rating_value, 1) }}</h3>
                     </div>
                     <div>
                         {!! $destination->description !!}

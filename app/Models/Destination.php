@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Image;
 use App\Models\Category;
 use App\Models\Review;
 use Illuminate\Support\Facades\DB;

@@ -13,7 +13,6 @@
                             <th>No</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Telephone</th>
                             <th>Total Ticket</th>
                             <th>Total Price</th>
                         </tr>
@@ -23,7 +22,6 @@
                             <th>No</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Telephone</th>
                             <th>Total Ticket</th>
                             <th>Total Price</th>
                         </tr>
@@ -34,7 +32,6 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $order->name }}</td>
                                 <td>{{ $order->email }}</td>
-                                <td>{{ $order->no_telp }}</td>
                                 <td>{{ $order->total_ticket }}</td>
                                 <td>${{ $order->total_price }}</td>
                             </tr>

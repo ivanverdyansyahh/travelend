@@ -11,26 +11,6 @@ use Illuminate\Support\Str;
 class DestinationController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -40,7 +20,7 @@ class DestinationController extends Controller
     {
         $file = $request->file($request_name);
         $fileName = time() . '_' . $file->getClientOriginalName();
-        $file->move(\public_path("uploads/destinations/$folder_name/"), $fileName);
+        $file->storePubliclyAs("uploads/destinations/$folder_name/", $fileName, 'public');
 
         return [$file, $fileName];
     }
@@ -197,8 +177,8 @@ class DestinationController extends Controller
     public function delete($id)
     {
         $destination = Destination::find($id);
-        $thumbnail_path = "uploads/destinations/thumbnails/" . $destination->thumbnail_img;
-        $hero_path = "uploads/destinations/heros/" . $destination->hero_img;
+        $thumbnail_path = "storage/uploads/destinations/thumbnails/" . $destination->thumbnail_img;
+        $hero_path = "storage/uploads/destinations/heros/" . $destination->hero_img;
 
         if(File::exists($thumbnail_path)) {
             File::delete($thumbnail_path);

@@ -15,9 +15,12 @@
                         <p class="title text-center">Sign In</p>
                         <form action="/signin" method="POST" class="form">
                             @csrf
-                            <input type="email" name="email" class="input-email" placeholder="Email">
+                            <input type="email" name="email" class="input-email" placeholder="Email"
+                                @if (Cookie::has('useremail')) value="{{ Cookie::get('useremail') }} @endif">
                             <input type="password" name="password" class="input-password" placeholder="Password">
-                            <span class="other d-flex align-items-center justify-content-between">
+                            <span
+                                class="other
+                                d-flex align-items-center justify-content-between">
                                 <span class="remember">
                                     <input type="checkbox" name="remember" class="input-remember me-2" id="remember-me">
                                     <label for="remember-me" class="label-remember">Remember Me</label>

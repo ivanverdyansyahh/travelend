@@ -15,7 +15,7 @@
                         <p class="title text-center">Sign Up</p>
                         <form action="/signup" method="POST" class="form">
                             @csrf
-                            <input type="text" name="name" class="input-name" placeholder="Name">
+                            <input type="text" name="username" class="input-username" placeholder="Username">
                             <input type="email" name="email" class="input-email" placeholder="Email">
                             <input type="password" name="password" class="input-password" placeholder="Password">
                             <button type="submit">Sign Up</button>

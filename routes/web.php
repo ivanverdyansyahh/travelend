@@ -31,8 +31,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function() {
 
     Route::resource('/categories', CategoryController::class);
     Route::get('/categories/delete/{id}', [CategoryController::class, 'delete']);
-
-    Route::resource('/orders', OrderController::class);
 });
 
 
@@ -48,15 +46,17 @@ Route::controller(AuthController::class)->group(function() {
     Route::get('/logout', 'logout')->middleware('auth');
 });
 
-Route::controller(LandingFrontendController::class)->group(function() {
-    Route::get('/', 'home')->name('home');
-    // Route::get('/destination/{category_slug}/{destination_slug}', 'destination');
-    // Route::get('/destinations', 'destinations');
-});
+Route::middleware('auth')->group(function() {
+    Route::controller(LandingFrontendController::class)->group(function() {
+        Route::get('/', 'home')->name('home');
+    });
+    
+    Route::get('/destination/{category_slug}/{destination_slug}', Destination::class);
+    Route::get('/destinations', Destinations::class);
+    
+    Route::controller(ReviewController::class)->group(function() {
+        Route::post('/reviews', 'store');
+    });
 
-Route::get('/destination/{category_slug}/{destination_slug}', Destination::class);
-Route::get('/destinations', Destinations::class);
-
-Route::controller(ReviewController::class)->middleware('auth')->group(function() {
-    Route::post('/reviews', 'store');
+    Route::resource('/orders', OrderController::class);
 });

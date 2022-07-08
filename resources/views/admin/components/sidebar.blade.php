@@ -5,7 +5,7 @@
         {{-- <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div> --}}
-        <div class="sidebar-brand-text mx-3">Travel<span class="text-warning">id<span></div>
+        <div class="sidebar-brand-text mx-3">Travel<span class="text-warning">end<span></div>
     </a>
 
     <!-- Divider -->
@@ -14,7 +14,7 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
         <a class="nav-link" href="/">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fa-solid fa-house"></i>
             <span>Landing Page</span></a>
     </li>
 
@@ -40,7 +40,7 @@
 
     <li class="nav-item {{ Request::is('admin/categories*') ? 'active' : '' }}">
         <a class="nav-link" href="/admin/categories/#">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fa-solid fa-border-all"></i>
             <span>Categories</span></a>
     </li>
 

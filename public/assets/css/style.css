@@ -119,7 +119,7 @@
     font-weight: 600;
 }
 
-.signin .card-form .input-name,
+.signin .card-form .input-username,
 .signin .card-form .input-email,
 .signin .card-form .input-password {
     outline: none;
@@ -130,31 +130,31 @@
     padding-bottom: 0.2rem;
 }
 
-.signin .card-form .input-name:hover,
+.signin .card-form .input-username:hover,
 .signin .card-form .input-email:hover,
 .signin .card-form .input-password:hover,
-.signin .card-form .input-name:focus,
+.signin .card-form .input-username:focus,
 .signin .card-form .input-email:focus,
 .signin .card-form .input-password:focus {
     border-bottom: 2px solid var(--color-white);
 }
 
-.signin .card-form .input-name:not(:placeholder-shown).input-name:not(:focus),
+.signin .card-form .input-username:not(:placeholder-shown).input-username:not(:focus),
 .signin .card-form .input-email:not(:placeholder-shown).input-email:not(:focus),
 .signin .card-form .input-password:not(:placeholder-shown).input-password:not(:focus) {
     border-bottom: 2px solid var(--color-white);
 }
 
-.signin .card-form .input-name:hover::placeholder,
+.signin .card-form .input-username:hover::placeholder,
 .signin .card-form .input-email:hover::placeholder,
 .signin .card-form .input-password:hover::placeholder,
-.signin .card-form .input-name:focus::placeholder,
+.signin .card-form .input-username:focus::placeholder,
 .signin .card-form .input-email:focus::placeholder,
 .signin .card-form .input-password:focus::placeholder {
     color: var(--color-white);
 }
 
-.signin .card-form .input-name::placeholder,
+.signin .card-form .input-username::placeholder,
 .signin .card-form .input-email::placeholder,
 .signin .card-form .input-password::placeholder {
     color: var(--color-gray);
@@ -265,7 +265,7 @@
     color: #DD9B4A;
 }
 
-.signin .card-form .input-name,
+.signin .card-form .input-username,
 .signin .card-form .input-email,
 .signin .card-form .other,
 .signin .card-form button {

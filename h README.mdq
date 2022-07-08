@@ -1,0 +1,23 @@
+* [33maab919d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/danuartha[m[33m, [m[1;32mdanuartha[m[33m)[m menghapus form order
+*   [33m4fbcf98[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'main' of https://github.com/IdaDanuartha/travelend
+[32m|[m[33m\[m  
+[32m|[m *   [33md8be678[m Merge branch 'ivanverdyansyahh:main' into main
+[32m|[m [34m|[m[35m\[m  
+[32m|[m [34m|[m *   [33m22502ae[m Merge pull request #1 from IdaDanuartha/main
+[32m|[m [34m|[m [36m|[m[1;31m\[m  
+* [34m|[m [36m|[m [1;31m|[m [33m9888a1e[m membuat fitur order ticket
+[34m|[m[34m/[m [36m/[m [1;31m/[m  
+* [36m|[m [1;31m/[m [33m89c2e7d[m memperbaiki struktur tabel
+[1;31m|[m [36m|[m[1;31m/[m  
+[1;31m|[m[1;31m/[m[36m|[m   
+* [36m|[m   [33m5d124f6[m Merge branch 'danuartha'
+[1;32m|[m[1;33m\[m [36m\[m  
+[1;32m|[m * [36m|[m [33m15cb615[m melakukan sedikit perubahan pada codingan
+* [1;33m|[m [36m|[m [33m51c74e7[m Merge branch 'danuartha'
+[1;34m|[m[1;33m\[m[1;33m|[m [36m|[m 
+[1;34m|[m * [36m|[m [33mef527fb[m Menambahkan views admin dan memperbaiki codingan
+* [1;35m|[m [36m|[m [33mf51d1e7[m test
+[1;35m|[m[1;35m/[m [36m/[m  
+* [36m/[m [33m383c3a5[m added other file
+[36m|[m[36m/[m  
+* [33m5835bb0[m first commit

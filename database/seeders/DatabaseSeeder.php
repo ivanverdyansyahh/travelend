@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Destination;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,6 +17,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'username' => 'Admin1',
+            'email' => 'admintravelend@gmail.com',
+            'password' => bcrypt('123456'),
+            'role_as' => 'admin',
+        ]);
+
+        User::create([
+            'username' => 'Danu14',
+            'email' => 'danuart14@gmail.com',
+            'password' => bcrypt('123456'),
+            'role_as' => 'user',
+        ]);
+
         Category::create([
             'name' => 'Mountain',
             'slug' => 'mountain',

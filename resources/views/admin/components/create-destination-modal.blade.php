@@ -90,7 +90,7 @@
                             Status
                         </label>
                         <label class="switch">
-                            <input type="checkbox" id="status" name="status">
+                            <input type="checkbox" checked="true" id="status" name="status">
                             <span class="slider"></span>
                             {{-- <p class="off">No</p>
                             <p class="on">Yes</p> --}}

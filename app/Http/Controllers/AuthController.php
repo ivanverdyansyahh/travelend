@@ -24,11 +24,11 @@ class AuthController extends Controller
 
     public function store(RegisterRequest $request)
     {
-        $email = $request->email;
+        // $email = $request->email;
 
         $user = new User([
-            "name" => $request->name,
-            "email" => $email,
+            "username" => $request->username,
+            "email" => $request->email,
             "password" => $request->password,
         ]);
 
@@ -50,7 +50,7 @@ class AuthController extends Controller
 
             if($request->has('remember')) { 
                 Cookie::queue('useremail', $request->email, 1440);
-                Cookie::queue('userpass', $request->password, 1440);
+                // Cookie::queue('userpass', $request->password, 1440);
             }
 
             if(Auth::user()->role_as == 'admin') {
@@ -70,6 +70,6 @@ class AuthController extends Controller
         request()->session()->invalidate();
         request()->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect()->route('login');
     }
 }
