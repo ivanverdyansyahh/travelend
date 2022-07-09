@@ -4,11 +4,13 @@ use App\Http\Controllers\AdminFrontendController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DestinationController;
-use App\Http\Controllers\LandingFrontendController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Livewire\Destination;
 use App\Http\Livewire\Destinations;
+use App\Http\Livewire\Home;
+use App\Http\Livewire\Login;
+use App\Http\Livewire\Signup;
 use Illuminate\Support\Facades\Route;
 
 
@@ -34,24 +36,22 @@ Route::middleware(['auth', 'isAdmin'])->group(function() {
 });
 
 
-Route::controller(AuthController::class)->group(function() {
-    Route::middleware('guest')->group(function() {
-        Route::get('/signup', 'signupView');
-        Route::get('/signin', 'loginView');
+Route::middleware('guest')->group(function() {
+    Route::get('/signup', Signup::class);
+    Route::get('/login', Login::class);
 
+    Route::controller(AuthController::class)->group(function() {
         Route::post('/signup', 'store');
-        Route::post('/signin', 'login')->name('login');
-    });
-
-    Route::get('/logout', 'logout')->middleware('auth');
-});
-
-Route::middleware('auth')->group(function() {
-    Route::controller(LandingFrontendController::class)->group(function() {
-        Route::get('/', 'home')->name('home');
+        Route::post('/login', 'login')->name('login');
     });
     
-    Route::get('/destination/{category_slug}/{destination_slug}', Destination::class);
+});
+
+Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth');
+
+Route::middleware('auth')->group(function() {    
+    Route::get('/', Home::class)->name('home');
+    Route::get('/destinations/{category_slug}/{destination_slug}', Destination::class);
     Route::get('/destinations', Destinations::class);
     
     Route::controller(ReviewController::class)->group(function() {

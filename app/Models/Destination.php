@@ -67,4 +67,13 @@ class Destination extends Model
         ->get();
     }
 
+    static public function getPopularDestinationReview()
+    {
+        return DB::table('destinations')->select('destinations.id', 'destinations.name', 'destinations.slug', 'destinations.thumbnail_img', 'destinations.price', 'destinations.location', 'destinations.status', 'categories.slug AS category_slug', DB::raw('(SELECT AVG(rating) FROM reviews WHERE reviews.destination_id = destinations.id) AS rating'))
+        ->join('categories', 'destinations.category_id', '=', 'categories.id')        
+        ->orderByDesc('rating')
+        ->limit(3)
+        ->get();
+    }
+
 }

@@ -12,16 +12,6 @@ use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
-    public function signupView()
-    {
-        return view('signup');
-    }
-
-    public function loginView()
-    {
-        return view('signin');
-    }
-
     public function store(RegisterRequest $request)
     {
         // $email = $request->email;

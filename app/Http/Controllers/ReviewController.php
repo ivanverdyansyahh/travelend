@@ -15,7 +15,7 @@ class ReviewController extends Controller
         $user_id = $request->user_id;
         $destination_id = $request->destination_id;
         $rating = $request->rating;
-        $comment = $request->comment;
+        // $comment = $request->comment;
 
         $check_destination = Destination::where('id', $destination_id)->exists();
 
@@ -24,7 +24,7 @@ class ReviewController extends Controller
 
             if($existing_review) {
                 $existing_review->rating = $rating;
-                $existing_review->comment = $comment;
+                // $existing_review->comment = $comment;
                 $existing_review->update();
             } else {
                 Review::create($request->all());

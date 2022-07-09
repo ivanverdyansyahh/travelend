@@ -7,10 +7,10 @@ use App\Models\Destination;
 
 class LandingFrontendController extends Controller
 {
-    public function home()
-    {
-        return view('home');
-    }
+    // public function home()
+    // {
+    //     return view('home');
+    // }
 
     // public function destinations()
     // {
